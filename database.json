@@ -1,0 +1,24 @@
+{
+    "placeholder":{
+      "driver": "pg",
+      "host": "localhost",
+      "user": "postgres",
+      "password": "passageword"
+    },
+    "dev": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "estore",
+      "user": "postgres",
+      "password": "passageword",
+      "port":"5432"
+    },
+    "test": {
+      "driver": "pg",
+      "host": "localhost",
+      "database": "hardware_test_db",
+      "user": "postgres",
+      "password": "passageword",
+      "port":"5432"
+    }
+  }

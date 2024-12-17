@@ -1,2 +1,40 @@
 //Abdullah Waleed
 extends /Layout
+block content
+    link(rel="stylesheet", href= host + "/resources/styles/management.css")
+    div(id = "body")
+        div(id = "bodyContent")
+            div(id = "pic_submission")
+                img(id = "pic")
+                button(type="submit", id = "submission") 
+            form(action="" method="post" id = "productDetails" enctype="multipart/form-data")
+
+                input(type="text" name = "name" placeholder = "PRODUCT NAME" class = "input" id = "inputTitle")
+                
+                div(class = "details" id = "details")
+                    label(for="" class = "label") TYPE: 
+                        select(name="type" class = "input" id = "inputType")
+                            <option hidden disabled selected value> -- select an option -- </option>
+                            option(value="gpu") GPU
+                            option(value="cpu") CPU
+                            option(value="screen") Screen 
+                            option(value="laptop") Laptop
+                            option(value="mouse") Mouse
+                            option(value="keyboard") Keyboard 
+                            option(value="headphone") Headphone 
+                    label(for="" class = "label") BRAND:
+                        select(name="brand" class = "input" id = "inputBrand")
+                            <option hidden disabled selected value> -- select an option -- </option>
+                            option(class = "brandOption gpu cpu keyboard mouse laptop" value="nvidia") NVIDIA
+                            option(class = "brandOption gpu cpu keyboard mouse laptop" value="amd") AMD
+                            option(class = "brandOption gpu cpu keyboard mouse laptop" value="intel") INTEL
+                            option(class = "brandOption gpu cpu keyboard mouse laptop" value="asus") ASUS 
+                    label(for="" class = "label") PRICE:
+                        input(type="text" name = "price" placeholder = "PRODUCT PRICE" class = "input" id = "inputPrice")
+                
+                textarea(cols="1" rows="1" name = "description" placeholder = "PRODUCT INFO" class = "inputParagraph" id = "inputInfo")
+                div(id="submitResult")
+                button(type="submit" class = "btn" id = "submission") Add product
+                button(type="button" class = "btn" id = "imgbtn")
+                    label(for="imgInput" id = "imgLabel" ) upload img  
+                    input(type="file" name="img"  class = "btn" id = "imgInput") 
